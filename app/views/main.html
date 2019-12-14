@@ -1,0 +1,40 @@
+<ul class="">
+  <li ng-include="'views/forms/new-post-form.html'" ng-show="me.connected"></li>
+
+  <li ng-repeat="post in posts" class="row marketing">
+    <div class="post">
+      <div class="post-header">
+        <h3 class="post-title">{{ post.title }}</h3>
+        <h4 class="post-author" ng-click="displayUserInfo(post)">{{ post.author.firstname + " " + post.author.lastname }}</h4><ng-include src="'views/user-popup.html'" ng-init="user=post.author" ng-show="post.showProfile"></ng-include>
+        <h5 class="post-date">{{ post.date | date:"d/MM/yy HH:mm" }}</h5>
+      </div>
+      <div class="post-body">
+        <img ng-src="{{ post.photoLink }}" class="img-responsive img-thumbnail img-rounded" />
+        <p class="post-description">
+          {{ post.description }}
+        </p>
+        <ul class="nav justify-content-left nav-pills">
+          <li class="nav-item"><button class="btn btn-lg btn-primary" ng-click="addLike(this.post)" ng-class="{active: !post.canLike}"><span class="post-like-count glyphicon glyphicon-thumbs-up">&nbsp;{{ post.likes }}</span> likes</li></button>
+          <li class="nav-item"><button class="btn btn-lg" ng-click="toggleComments(this.post)"><span class="post-comment-button glyphicon glyphicon-menu-hamburger">&nbsp;{{ post.commentCount }}</span> messages</li></button>
+        </ul>
+      </div>
+      <div class="post-comments" ng-show="post.showComments">
+        <ul class="">
+          <li class="" ng-repeat="comment in post.comments">
+            <div class="comment">
+              <p>
+                <span class="comment-author" ng-class="{comment_op: comment.isOP}" ng-click="displayUserInfo(comment)">@{{ comment.author.pseudo }}</span><ng-include src="'views/user-popup.html'" ng-init="user=comment.author" ng-show="comment.showProfile"></ng-include> : <span class="comment-message">{{ comment.message }}</span>
+              </p>
+              <p>
+                <span class="comment-date">{{ comment.date | date:"d/MM/yy HH:mm" }}
+          </li>
+          <li class="" ng-hide="post.comments">Wait...</li>
+          <div class="lg-12">
+            <input type="text" ng-model="post.newMessage" class="input-sm new-comment-input" />
+            <button type="submit" class="btn btn-primary" ng-click="addComment(this.post)">Envoyer</button>
+          </div>
+        </ul>
+      </div>
+    </div>
+  </li>
+</ul>

@@ -1,0 +1,27 @@
+<ul class="" ng-controller="MainCtrl">
+  <li ng-include="'views/forms/new-post-form.html'"></li>
+  
+  <li ng-repeat="post in bestPosts()" class="row marketing">
+    <div class="post">
+      <div class="post-header">
+        <h4 class="post-author">{{ post.author }}</h4>
+        <h3 class="post-date">{{ post.date | date:"dd/MM/yy HH:mm" }}</h3>
+      </div>
+      <div class="post-body">
+        <img ng-src="{{ post.photoLink }}" class="img-responsive img-thumbnail img-rounded" />
+        <p class="post-description">
+          {{ post.description }}
+        </p>
+        <ul class="nav justify-content-left">
+          <li class="nav-item"><button (click)="addLike()"><span class="post-like-count glyphicon glyphicon-thumbs-up">&nbsp;{{ post.likesCount }}</span> likes</li></button>
+          <li class="nav-item"><span class="post-comment-button glyphicon glyphicon-menu-hamburger">&nbsp;{{ post.messagesCount }}</span> messages</li>
+        </ul>
+      </div>
+      <div class="post-comments">
+        <ul class="">
+          <li class="">Test</li>
+        </ul>
+      </div>
+    </div>
+  </li>
+</ul>

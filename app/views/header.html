@@ -1,0 +1,34 @@
+<div class="header">
+	<nav class="navbar navbar-default" role="navigation" bs-navbar>
+		<div class="container">
+			<div class="navbar-header">
+
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#js-navbar-collapse">
+					<span class="sr-only">Afficher/masquer le menu</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+
+				<a class="navbar-brand" href="#!/home">{{ appName }}</a>
+			</div>
+
+			<div class="collapse navbar-collapse" id="js-navbar-collapse">
+
+				<ul class="nav navbar-nav">
+					<li class="nav-item" data-match-route="/home.*"><a href="#!/home">Accueil</a></li>
+					<!-- <li class="nav-item" data-match-route="/post.*"><a ng-href="#!/post">Meilleurs posts</a></li> -->
+					<li class="nav-item" data-match-route="/profile.*"><a ng-href="#!/profile">Mon profil</a></li>
+					<li class="nav-item" data-match-route="/about"><a ng-href="#!/about">À propos</a></li>
+					<li class="nav-item" data-match-route="/contact"><a ng-href="#!/contact">Contact</a></li>
+					<li class="nav-item" ng-show="me.connected" ><a ng-click="disconnectUser()" href="#!/home">Déconnexion</a></li>
+					<li class="nav-item" ng-hide="me.connected" ><a ng-href="#!/profile">Se connecter</a></li>
+				</ul>
+				<form class="form-inline my-2 my-lg-0">
+					<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+					<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+				</form>
+			</div>
+		</div>
+	</nav>
+</div>
