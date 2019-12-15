@@ -1,16 +1,13 @@
 <div class="header">
 	<nav class="navbar navbar-default" role="navigation" bs-navbar>
-		<div class="container">
+		<div class="container" id="navbar-container">
 			<div class="navbar-header">
 
 				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#js-navbar-collapse">
-					<span class="sr-only">Afficher/masquer le menu</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
+					<span class="glyphicon glyphicon-menu-hamburger"></span>
 				</button>
 
-				<a class="navbar-brand" href="#!/home">{{ appName }}</a>
+				<a class="navbar-brand" href="#!/home"><img src="../images/logo.png" id="logo"/></a>
 			</div>
 
 			<div class="collapse navbar-collapse" id="js-navbar-collapse">
@@ -25,8 +22,8 @@
 					<li class="nav-item" ng-hide="me.connected" ><a ng-href="#!/profile">Se connecter</a></li>
 				</ul>
 				<form class="form-inline my-2 my-lg-0">
-					<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-					<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+					<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" id="search-bar">
+					<button class="btn btn-outline-success my-2 my-sm-0" type="submit" id="search-btn"><span class="glyphicon glyphicon-search"></span></button>
 				</form>
 			</div>
 		</div>

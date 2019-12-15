@@ -1,12 +1,11 @@
-<ul class="">
-  <li ng-include="'views/forms/new-post-form.html'" ng-show="me.connected"></li>
 
+<ul class="post-form" id="posts">
+  <li ng-include="'views/forms/new-post-form.html'" ng-show="me.connected"></li>
   <li ng-repeat="post in posts" class="row marketing">
     <div class="post">
       <div class="post-header">
         <h3 class="post-title">{{ post.title }}</h3>
-        <h4 class="post-author" ng-click="displayUserInfo(post)">{{ post.author.firstname + " " + post.author.lastname }}</h4><ng-include src="'views/user-popup.html'" ng-init="user=post.author" ng-show="post.showProfile"></ng-include>
-        <h5 class="post-date">{{ post.date | date:"d/MM/yy HH:mm" }}</h5>
+        <h5 class="post-author" ng-click="displayUserInfo(post)">{{ post.author.firstname + " " + post.author.lastname + " - " + (post.date | date:"d/MM/yy HH:mm")}}</h5><ng-include src="'views/user-popup.html'" ng-init="user=post.author" ng-show="post.showProfile"></ng-include>
       </div>
       <div class="post-body">
         <img ng-src="{{ post.photoLink }}" class="img-responsive img-thumbnail img-rounded" />

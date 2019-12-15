@@ -14,6 +14,13 @@ body {
   padding: 0;
 }
 
+#connexion-google-img {
+  width: 35px;
+}
+
+#connexion-facebook-img {
+  width: 35px;
+}
 /* Everything but the jumbotron gets side spacing for mobile first views */
 .header,
 .marketing,
@@ -22,10 +29,23 @@ body {
   padding-right: 15px;
 }
 
+#logo {
+  width: 45px;
+  margin-top: -12.5px;
+}
+
+#search-bar {
+  margin-top: 10px;
+  width: 100px;
+}
+
+#search-btn {
+  margin-top: 7.5px;
+}
 /* Custom page header */
 .header {
   border-bottom: 1px solid #e5e5e5;
-  margin-bottom: 10px;
+  width: 100%
 
   /* Make the masthead heading the same height as the navigation */
   h3 {
@@ -47,6 +67,9 @@ body {
   margin: 30px 0;
 }
 
+#add-post {
+  width: 100%;
+}
 /* Main marketing message and sign up button */
 .jumbotron {
   text-align: center;
@@ -84,6 +107,7 @@ body {
   .header {
     margin-bottom: 30px;
   }
+
   /* Remove the bottom border on the jumbotron for visual effect */
   .jumbotron {
     border-bottom: 0;
@@ -104,9 +128,6 @@ input:invalid {
   border-color: red;
 }
 
-ul {
-    list-style: none;
-}
 
 form.new-post {}
 
@@ -118,15 +139,10 @@ form.new-post {}
 }
 
 .post {
-    border-top: 1px solid black;
-    padding: 0px 30px;
-}
-
-.post-header {
-    background-color: #f2f2f2;
-    padding: 1px 20px;
-    border-radius: 10px;
-    margin: 20px 0px;
+  background-color: #f2f2f2;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 10px 0px;
 }
 
 img.img-responsive.img-thumbnail.img-rounded {
@@ -174,6 +190,10 @@ span.comment-author.ng-binding {
     /* height: 0; */
     top: -170px;
     display: inline-block;
+}
+
+ul{
+  list-style: none;
 }
 
 .popup ul {
