@@ -35,7 +35,7 @@ Si erreur :
 ```
 grunt install --force && bower install
 ```
-##Lancement
+## Lancement
 ```
 grunt serve
 ```
