@@ -17,7 +17,7 @@ var app = angular.module('angularApp')
 		newPost.id = "" + newPost.author + "" + newPost.date;
 		newPost.likes = 0;
 		newPost.messagesCount = 0;
-		scaleImage(newPost.image.data, 0.5, newPost.image.type, 0.01, function(newDataUrl) {
+		scaleImage(newPost.image.data, 0.8, newPost.image.type, 0.5, function(newDataUrl) {
 			newPost.photoLink = newDataUrl;
 			postFactory.addPost(newPost, function() {
 			});
