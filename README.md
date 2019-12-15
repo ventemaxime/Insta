@@ -30,16 +30,16 @@ gem install compass
 6. Configurer grunt et bower
 ```
 grunt install && bower install
-
-#Si erreur :
-
+```
+Si erreur :
+```
 grunt install --force && bower install
 ```
 7. Lancer le serveur
 ```
 grunt serve
-
-#Si erreur :
-
+```
+Si erreur :
+```
 grunt serve --force
 ```
