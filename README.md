@@ -27,11 +27,19 @@ npm install -g bower && npm install -g grunt
 ```
 gem install compass
 ```
-6. Configurer grunt
+6. Configurer grunt et bower
 ```
-grunt install --force
+grunt install && bower install
+
+#Si erreur :
+
+grunt install --force && bower install
 ```
 7. Lancer le serveur
 ```
+grunt serve
+
+#Si erreur :
+
 grunt serve --force
 ```
