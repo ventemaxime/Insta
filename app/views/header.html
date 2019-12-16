@@ -1,13 +1,16 @@
 <div class="header">
 	<nav class="navbar navbar-default" role="navigation" bs-navbar>
-		<div class="container" id="navbar-container">
+		<div class="container">
 			<div class="navbar-header">
 
 				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#js-navbar-collapse">
-					<span class="glyphicon glyphicon-menu-hamburger"></span>
+					<span class="sr-only">Afficher/masquer le menu</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
 				</button>
 
-				<a class="navbar-brand" href="#!/home"><img src="../images/logo.png" id="logo"/></a>
+				<a class="navbar-brand" href="#!/home">{{ appName }}</a>
 			</div>
 
 			<div class="collapse navbar-collapse" id="js-navbar-collapse">
@@ -22,8 +25,8 @@
 					<li class="nav-item" ng-hide="me.connected" ><a ng-href="#!/profile">Se connecter</a></li>
 				</ul>
 				<form class="form-inline my-2 my-lg-0">
-					<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" id="search-bar">
-					<button class="btn btn-outline-success my-2 my-sm-0" type="submit" id="search-btn"><span class="glyphicon glyphicon-search"></span></button>
+					<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" ng-model="searchQuery">
+					<button class="btn btn-outline-success my-2 my-sm-0" type="submit" ng-click="search(searchQuery)">Search</button>
 				</form>
 			</div>
 		</div>

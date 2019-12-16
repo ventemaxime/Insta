@@ -1,0 +1,26 @@
+<ul class="" ng-controller="SearchCtrl">
+
+  <li ng-repeat="post in posts" class="row marketing">
+    <div class="post">
+      <div class="post-header" style="float:left">
+        <h3 class="post-title">{{ post.title }}</h3>
+        <h4 class="post-author" ng-click="displayUserInfo(post)">{{ post.author.firstname + " " + post.author.lastname }}</h4><ng-include src="'views/user-popup.html'" ng-init="user=post.author" ng-show="post.showInfos"></ng-include>
+        <h5 class="post-date">{{ post.date | date:"d/MM/yy HH:mm" }}</h5>
+      </div>
+      <div class="post-body" style="float:left">
+        <img ng-src="{{ post.photoLink }}" class="img-responsive img-thumbnail img-rounded mini" style="width: 100px"/>
+        <p class="post-description">
+          {{ post.description }}
+        </p>
+      </div>
+    </div>
+  </li>
+
+  <hr/>
+
+  <li ng-repeat="user in users" class="row marketing">
+    <div class="user">
+      <span class="comment-author" ng-click="displayUserInfo(user)">{{ user.firstname }} {{ user.lastname }} (@{{ user.pseudo }})</span><ng-include src="'views/user-popup.html'" ng-init="user=user" ng-show="user.showInfos"></ng-include>
+    </div>
+  </li>
+</ul>

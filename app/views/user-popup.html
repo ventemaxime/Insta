@@ -7,8 +7,8 @@
 				<li class="">J'ai publié {{ user.postCount }} posts</li>
 				<li class="">{{ user.followersCount }} personnes me suivent</li>
 				<li class="">Et j'en ai follow-back {{ user.followings.length }}.</li>
-				<li class="" ng-show="user.canFollow"><button class="btn btn-principal" ng-click="follow(user)">Follow-moi</button></li>
-				<li class="" ng-hide="user.canFollow"><button class="btn btn-principal" ng-click="follow(user)">Arrêter de me suivre</button></li>
+				<li class="" ng-show="user.canFollow && me.connected"><button class="btn btn-principal" ng-click="follow(user)">Follow-moi</button></li>
+				<li class="" ng-hide="user.canFollow || !me.connected"><button class="btn btn-principal" ng-click="follow(user)">Arrêter de me suivre</button></li>
 			</ul>
 		</div>
 	</div>
