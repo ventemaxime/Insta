@@ -187,9 +187,13 @@ app.factory('profileProvider', function($rootScope, $cookies, $http) {
 			if(indexOfData !== undefined) {
 				data = data[indexOfData];
 			} else {
-				let x = {};
-				x[data.propertyMap.email] = data;
-				data = x;
+				try {
+					let x = {};
+					x[data.propertyMap.email] = data;
+					data = x;
+				} catch(e) {
+					
+				}
 			}
 			data = data;
 			let profiles = {};
