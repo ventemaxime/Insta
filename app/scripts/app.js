@@ -122,6 +122,11 @@ var app = angular
 				controller: 'ContactCtrl',
 				controllerAs: 'contact'
 			})
+			.when('/search', {
+				templateUrl: 'views/search.html',
+				controller: 'SearchCtrl',
+				controllerAs: 'search'
+			})
 			.otherwise({
 				redirectTo: '/home'
 			});
@@ -147,6 +152,10 @@ app.controller("appController", function($rootScope, $window, profileProvider) {
 	};
 	$rootScope.stopFollowUser = function(user) {
 
+	};
+	$rootScope.search = function(query) {
+		$rootScope.searchQuery = query;
+		$window.location.href = "#!/search";
 	};
 });
 
