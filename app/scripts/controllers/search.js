@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use strict';
 
 /**
@@ -48,5 +47,4 @@ app.factory('SearchFactory', function($http, profileProvider, postFactory) {
 	};
 
 	return SearchFactory;
-
 });
