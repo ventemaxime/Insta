@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <div class="popup-wrapper">
 	<div class="popup">
 		<div class="">
@@ -14,20 +13,3 @@
 		</div>
 	</div>
 </div>
-=======
-<div class="popup-wrapper">
-	<div class="popup">
-		<div class="">
-			<ul class="">
-				<li class="">{{ user.firstname }} {{ user.lastname }}</li>
-				<li class="">Mais on m'appelle @{{ user.pseudo }}</li>
-				<li class="">J'ai publié {{ user.postCount }} posts</li>
-				<li class="">{{ user.followersCount }} personnes me suivent</li>
-				<li class="">Et j'en ai follow-back {{ user.followings.length }}.</li>
-				<li class="" ng-show="user.canFollow && me.connected"><button class="btn btn-principal" ng-click="follow(user)">Follow-moi</button></li>
-				<li class="" ng-hide="user.canFollow || !me.connected"><button class="btn btn-principal" ng-click="follow(user)">Arrêter de me suivre</button></li>
-			</ul>
-		</div>
-	</div>
-</div>
->>>>>>> 5494b74be704fedd62d214579303011c8ff40415
