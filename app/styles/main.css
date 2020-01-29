@@ -5791,6 +5791,12 @@ button.close {
 body {
   padding: 0; }
 
+#connexion-google-img {
+  width: 35px; }
+
+#connexion-facebook-img {
+  width: 35px; }
+
 /* Everything but the jumbotron gets side spacing for mobile first views */
 .header,
 .marketing,
@@ -5798,16 +5804,25 @@ body {
   padding-left: 15px;
   padding-right: 15px; }
 
+#logo {
+  width: 45px;
+  margin-top: -12.5px; }
+
+#search-bar {
+  margin-top: 10px;
+  width: 100px; }
+
+#search-btn {
+  margin-top: 7.5px; }
+
 /* Custom page header */
 .header {
   border-bottom: 1px solid #e5e5e5;
-  margin-bottom: 10px;
-  /* Make the masthead heading the same height as the navigation */ }
-  .header h3 {
-    margin-top: 0;
-    margin-bottom: 0;
-    line-height: 40px;
-    padding-bottom: 19px; }
+  width: 100% h3;
+    width-margin-top: 0;
+    width-margin-bottom: 0;
+    width-line-height: 40px;
+    width-padding-bottom: 19px; }
 
 /* Custom page footer */
 .footer {
@@ -5817,6 +5832,9 @@ body {
 
 .container-narrow > hr {
   margin: 30px 0; }
+
+#add-post {
+  width: 100%; }
 
 /* Main marketing message and sign up button */
 .jumbotron {
@@ -5862,5 +5880,126 @@ img.img-rounded {
 input:invalid {
   box-shadow: inset 0 0 3px 0px red;
   border-color: red; }
+
+.post::before {
+  width: 100%;
+  display: block;
+  border: 1px solid black;
+  height: 1px; }
+
+.post {
+  background-color: #f2f2f2;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 10px 0px; }
+
+img.img-responsive.img-thumbnail.img-rounded {
+  width: 80%;
+  margin-left: 10%; }
+
+button.btn-like.active {
+  background-color: #8888e2;
+  color: white;
+  font-weight: bold; }
+
+button.btn-like {
+  background-color: #5959ff;
+  color: white;
+  font-weight: bold; }
+
+.comment {
+  background-color: aliceblue;
+  padding: 5px 20px;
+  border-radius: 10px; }
+
+span.comment-author.ng-binding.comment_op {
+  background-color: #0000d9;
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+  font-weight: bolder; }
+
+span.comment-author.ng-binding {
+  /* background-color: #0000d9; */
+  /* color: white; */
+  padding: 5px;
+  border-radius: 5px;
+  font-weight: bolder; }
+
+.popup {
+  padding: 0px;
+  position: relative;
+  /* width: 0; */
+  /* height: 0; */
+  top: -170px;
+  display: inline-block; }
+
+ul {
+  list-style: none; }
+
+.popup ul {
+  margin: 0;
+  padding: 0; }
+
+.popup > div {
+  margin: 0;
+  background-color: #a8c0ff;
+  border-radius: 5px;
+  padding: 5px 24px;
+  box-shadow: 0px 0px 3px 2px #a8c0ff; }
+
+.popup-wrapper {
+  position: absolute; }
+
+.popup:after {
+  content: "";
+  display: inline-block;
+  background-color: #00000000;
+  width: 50px;
+  height: 50px;
+  transform: rotate(45deg);
+  border-left: 50px blue;
+  border-bottom: 50px blue;
+  position: relative;
+  top: -25px;
+  left: 58px;
+  border-right: solid 10px transparent;
+  border-left: solid 10px transparent;
+  border-top: solid 10px #a8c0ff;
+  transform: translateX(-50%);
+  position: absolute;
+  /* z-index: -1; */
+  content: '';
+  top: 100%;
+  /* left: 50%; */
+  height: 0;
+  width: 0; }
+
+.new-comment-input {
+  width: 70%; }
+
+.post-description {
+  font-size: 1.2em;
+  margin-left: 10%;
+  font-style: italic;
+  display: inline-block; }
+
+.post-description:before {
+  content: ",,";
+  display: inline-block;
+  transform: rotate(180deg);
+  font-size: xx-large;
+  font-family: "comic sans-serif";
+  font-weight: bold;
+  margin-right: 2px; }
+
+.post-description:after {
+  content: ",,";
+  font-size: xx-large;
+  /* transform: rotate(180deg); */
+  display: inline-block;
+  margin-left: 5px;
+  font-family: "comic sans-serif";
+  font-weight: bold; }
 
 /*# sourceMappingURL=main.css.map */
